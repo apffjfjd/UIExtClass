@@ -1,0 +1,19 @@
+@import "./var.css";
+
+@import "./transition.css";
+@import "./transform.css";
+
+@keyframes circle_hover {
+  0% {
+    border-radius: 0%;
+    background-color: red;
+  }
+  50% {
+    border-radius: 50%;
+    background-color: blue;
+  }
+  100% {
+    border-radius: 0%;
+    background-color: red;
+  }
+}

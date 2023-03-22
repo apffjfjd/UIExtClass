@@ -1,0 +1,82 @@
+/* .trans {
+  width: 7rem;
+  height: 7rem;
+  background-color: red;
+  transition: all 2s;
+}
+.trans:hover {
+  background-color: blue;
+  border-radius: 50%;
+} */
+
+.trans {
+  width: 7rem;
+  height: 7rem;
+  background-color: red;
+  transition: all 2s;
+  animation-name: circle_hover;
+}
+.hover {
+  animation-name: circle_hover;
+}
+/* transition-property 연습 */
+.trans-prop {
+  width: 100px;
+  height: 50px;
+  background-color: tomato;
+  transition-property: background-color width;
+  transition-duration: 2s;
+}
+.trans-prop:hover {
+  width: 300px;
+  background-color: teal;
+}
+
+.trans-wid {
+  width: 7rem;
+  height: 3rem;
+  background-color: red;
+  color: white;
+  transition-property: width, opacity;
+}
+.trans-wid:nth-child(1) {
+  transition-duration: 1s;
+}
+.trans-wid:nth-child(2) {
+  transition-duration: 1s;
+}
+.trans-wid:nth-child(3) {
+  transition-duration: 1s;
+}
+.trans-wid:hover {
+  width: 14rem;
+  opacity: 0.1;
+}
+
+.trans-many {
+  width: 7rem;
+  height: 3rem;
+  background-color: red;
+  color: white;
+  transition-property: width, opacity;
+  transition-delay: 4s;
+}
+.trans-many:nth-child(1) {
+  transition: 2s ease;
+}
+.trans-many:nth-child(2) {
+  transition: 2s linear;
+}
+.trans-many:nth-child(3) {
+  transition: 2s ease-in;
+}
+.trans-many:nth-child(4) {
+  transition: 2s ease-out;
+}
+.trans-many:nth-child(5) {
+  transition: 2s ease-in-out;
+}
+.trans-many:hover {
+  width: 14rem;
+  opacity: 0.1;
+}
