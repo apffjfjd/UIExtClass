@@ -1,0 +1,42 @@
+@keyframes movement {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: blue;
+    transform: translate(400px, 0);
+  }
+  50% {
+    background-color: yellow;
+    transform: translate(400px, 400px);
+  }
+  75% {
+    background-color: green;
+    transform: translate(0, 400px);
+  }
+  100% {
+    background-color: red;
+  }
+}
+.back {
+  width: 500px;
+  height: 500px;
+  border: 5px dashed black;
+}
+
+.move {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation: movement 5s infinite ease-in-out;
+  animation-direction: alternate;
+}
+
+.move:hover {
+  background-color: tomato;
+  animation-play-state: paused;
+}
+.move:active {
+  background-color: tomato;
+  animation-play-state: running;
+}

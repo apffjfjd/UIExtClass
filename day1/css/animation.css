@@ -1,0 +1,76 @@
+@keyframes circle {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes f {
+  from {
+    background-color: tomato;
+    transform: rotateY(0deg);
+  }
+  to {
+    background-color: teal;
+    transform: rotateY(360deg);
+  }
+}
+@keyframes change {
+  0% {
+    color: rebeccapurple;
+  }
+  25% {
+    color: brown;
+  }
+  50% {
+    color: coral;
+  }
+  75% {
+    color: darkgreen;
+  }
+  100% {
+    color: khaki;
+  }
+}
+@keyframes back {
+  0% {
+    background-color: khaki;
+  }
+  25% {
+    background-color: rebeccapurple;
+  }
+  50% {
+    background-color: brown;
+  }
+  75% {
+    background-color: coral;
+  }
+  100% {
+    background-color: darkgreen;
+  }
+}
+p {
+  width: 500px;
+  height: 100px;
+  font-size: 1.5rem;
+  /* background-color: wheat; */
+  animation-name: change, back;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.ani-con1 {
+  height: 200px;
+  width: 200px;
+  margin: 30px;
+  border-radius: 50%;
+  font-size: 50px;
+  background-color: tomato;
+  text-align: center;
+  line-height: 200px;
+  animation-name: circle;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}

@@ -2,6 +2,7 @@
 
 @import "./transition.css";
 @import "./transform.css";
+@import "./animation.css";
 
 @keyframes circle_hover {
   0% {
