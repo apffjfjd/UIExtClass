@@ -10,8 +10,18 @@
   <body>
     <div class="con1">
       <div class="con2">
-        <div class="con3"></div>
+        <div class="con3 right"></div>
       </div>
     </div>
+    <!-- <div class="test">pink or blue</div> -->
   </body>
+  <script>
+    const heart = document.querySelector(".con2");
+    const moveBtn = document.querySelector(".con3");
+    heart.addEventListener("click", function () {
+      moveBtn.classList.toggle("left");
+      moveBtn.classList.toggle("right");
+      heart.classList.toggle("blue");
+    });
+  </script>
 </html>
