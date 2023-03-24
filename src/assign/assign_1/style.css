@@ -1,0 +1,104 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: azure;
+  position: relative;
+}
+.con1 {
+  display: flex;
+}
+.con2 {
+  position: relative;
+  width: 7.5rem;
+  height: 7rem;
+}
+.con2-left {
+  position: absolute;
+  left: -50%;
+  width: 11rem;
+  height: 7rem;
+  background-color: white;
+  border-radius: 50%;
+  transform: rotate(30deg);
+  border-bottom: 5px solid lightblue;
+  transition-property: background-color;
+  transition-delay: 0.7s;
+  transition-duration: 0.3s;
+  overflow: hidden;
+}
+.con2-right {
+  background-color: white;
+  position: absolute;
+  width: 11rem;
+  height: 7rem;
+  border-radius: 50%;
+  transform: rotate(-30deg);
+  transition-property: background-color;
+  transition-delay: 0.7s;
+  transition-duration: 0.3s;
+  border-bottom: 5px solid lightblue;
+  overflow: hidden;
+  z-index: 1;
+}
+
+@keyframes on {
+  0% {
+    background-color: white;
+  }
+  50% {
+    transform: translate(-50px, 25px);
+  }
+  100% {
+    transform: translate(-100px, 0);
+  }
+}
+@keyframes off {
+  0% {
+    background-color: white;
+    transform: translate(-100px, 0);
+  }
+  50% {
+    transform: translate(-50px, 25px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.con3 {
+  position: absolute;
+  left: 4.3rem;
+  width: 5.3rem;
+  height: 5.3rem;
+  border-radius: 50%;
+  background-color: white;
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+  z-index: 99;
+}
+
+.left {
+  position: absolute;
+  animation: on 0.8s ease-out;
+  animation-fill-mode: forwards;
+}
+.right {
+  animation: off 0.8s ease-out;
+  animation-fill-mode: both;
+}
+.blue {
+  background-color: dodgerblue;
+}
+/* .trans-prop {
+  width: 100px;
+  height: 50px;
+  background-color: tomato;
+  transition-property: background-color width;
+  transition-duration: 2s;
+}
+.trans-prop:hover {
+  width: 300px;
+  background-color: teal;
+} */
