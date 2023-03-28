@@ -11,10 +11,12 @@ header {
   height: auto;
   display: flex;
   background: linear-gradient(var(--lighter), var(--darker));
+  justify-content: space-around;
 }
 .con1 {
   width: 45%;
-  margin: 5% 5%;
+  margin: 5%;
+  margin-left: 15%;
 }
 .con1 > h1 {
   font-size: 3rem;
@@ -40,7 +42,13 @@ header {
 
 .con2 {
   width: 35%;
-  border: 1px solid yellow;
+  position: relative;
+  /* border: 1px solid yellow; */
+}
+.con2 > img {
+  width: 57%;
+  position: absolute;
+  bottom: 0;
 }
 
 .con3 {
@@ -102,7 +110,7 @@ header {
 .con4-li__flex {
   display: flex;
   justify-content: space-between;
-  width: 85%;
+  width: 60%;
   margin: auto;
   margin-top: 2.5rem;
   margin-bottom: 5rem;
@@ -153,38 +161,56 @@ header {
 .con5-grid {
   display: flex;
   flex-wrap: wrap;
-  width: 90%;
+  width: 80%;
+  height: auto;
   margin: auto;
   justify-content: center;
   margin-top: 3rem;
 }
 .con5-grid-frame {
-  width: 45%;
-  height: 15.9rem;
-  border: 1px solid black;
+  width: 40%;
+  height: 25.4rem;
   position: relative;
 }
 .con5-grid-frame-img {
-  border: 1px solid black;
+  width: auto;
+  height: auto;
+  position: absolute;
+  transition-property: all;
+  transition-duration: 2s;
+}
+.con5-grid-frame-img:hover {
+  position: absolute;
+  left: 7.5%;
+  top: 7.5%;
+  width: 85%;
+  height: 85%;
+  overflow: hidden;
 }
 .con5-grid-frame-img > img {
-  width: 100%;
+  left: -8.8%;
+  top: -8.8%;
+  width: 38rem;
+  height: auto;
+  overflow: hidden;
   position: absolute;
 }
-.con5-grid-frame-img:nth-child(1):hover {
-  width: 40%;
-  height: 14rem;
-}
+
 .con5-grid-frame > h1 {
   position: absolute;
   color: white;
   font-weight: 900;
   font-size: 1rem;
+  top: 14rem;
+  left: 5rem;
 }
-.con5-grid-frame > p {
+.con5-grid-frame > pre {
   position: absolute;
   color: white;
   font-size: 1.1rem;
+  top: 16rem;
+  left: 5rem;
+  line-height: 1.5rem;
 }
 
 footer {
