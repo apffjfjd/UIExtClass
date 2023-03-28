@@ -1,0 +1,31 @@
+/* @media screen {
+  h2 {
+    color: red;
+  }
+}
+@media print {
+  h2 {
+    color: blue;
+  }
+} */
+
+@media (min-width: 1024px) {
+  h2 {
+    color: teal;
+  }
+}
+@media (max-width: 1024px) {
+  h2 {
+    color: blue;
+  }
+}
+@media (min-width: 768px) {
+  h2 {
+    color: red;
+  }
+}
+@media (min-width: 480px) {
+  h2 {
+    color: tomato;
+  }
+}
