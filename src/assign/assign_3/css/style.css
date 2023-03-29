@@ -176,16 +176,22 @@ header {
   width: auto;
   height: auto;
   position: absolute;
-  transition-property: all;
-  transition-duration: 2s;
+  /* transition: transform 1s ease-in-out; */
+  transition: transform 1s ease-in-out;
 }
-.con5-grid-frame-img:hover {
+/* .con5-grid-frame-img:hover {
   position: absolute;
   left: 7.5%;
   top: 7.5%;
   width: 85%;
   height: 85%;
   overflow: hidden;
+} */
+.con5-grid-frame-img:hover {
+  position: absolute;
+  /* left: 7.5%;
+  top: 7.5%; */
+  transform: scale(0.8);
 }
 .con5-grid-frame-img > img {
   left: -8.8%;
@@ -203,6 +209,7 @@ header {
   font-size: 1rem;
   top: 14rem;
   left: 5rem;
+  pointer-events: none;
 }
 .con5-grid-frame > pre {
   position: absolute;
@@ -211,6 +218,7 @@ header {
   top: 16rem;
   left: 5rem;
   line-height: 1.5rem;
+  pointer-events: none;
 }
 
 footer {
