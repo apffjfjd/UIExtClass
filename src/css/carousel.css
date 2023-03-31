@@ -1,0 +1,20 @@
+:root {
+  scroll-behavior: auto;
+}
+.main {
+  overflow: hidden;
+}
+.s-container {
+  width: 300vw;
+  transition: all 1s;
+  transform: translate(-100vw);
+  display: flex;
+  /* flex-wrap: nowrap; */
+}
+.s-box {
+  width: 100vw;
+  float: left;
+}
+.s-box img {
+  width: 100%;
+}

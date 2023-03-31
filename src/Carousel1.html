@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/carousel.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="s-container">
+        <div class="s-box">
+          <img src="img/car1.png" alt="" />
+        </div>
+        <div class="s-box">
+          <img src="img/car2.png" alt="" />
+        </div>
+        <div class="s-box">
+          <img src="img/car3.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <button class="prev">이전</button>
+    <button class="next">다음</button>
+  </body>
+  <script>
+    const carouselSlide = document.querySelector(".s-container");
+    const carouselImages = document.querySelectorAll(".s-box");
+    const prevBtn = document.querySelector(".prev");
+    const nextBtn = document.querySelector(".next");
+
+    let counter = 1;
+    const size = carouselImages[0].clientWidth;
+
+    carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+
+    nextBtn.addEventListener("click", () => {
+      if (counter >= carouselImages.length - 1) return;
+      carouselSlide.style.transition = "transform 0.3s ease-in-out";
+      counter++;
+      carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+    });
+
+    prevBtn.addEventListener("click", () => {
+      if (counter <= 0) return;
+      carouselSlide.style.transition = "transform 0.3s ease-in-out";
+      counter--;
+      carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+    });
+
+    <!-- carouselSlide.addEventListener("transitionend", () => {
+      if (carouselImages[counter].id === "lastClone") {
+        carouselSlide.style.transition = "none";
+        counter = carouselImages.length - 2;
+        carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+      }
+
+      if (carouselImages[counter].id === "firstClone") {
+        carouselSlide.style.transition = "none";
+        counter = carouselImages.length - counter;
+        carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+      }
+    }); -->
+  </script>
+</html>
